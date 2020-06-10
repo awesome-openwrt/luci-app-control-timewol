@@ -1,8 +1,9 @@
 local i = require "luci.sys"
 local t, e, o
-t = Map("timewol", translate("定时网络唤醒"), translate("定时唤醒你的局域网设备"))
+t = Map("timewol", translate("定时网络唤醒"),
+        translate("定时唤醒你的局域网设备"))
 t.template = "timewol/index"
-e = t:section(TypedSection, "basic", translate("运行状态"))
+e = t:section(TypedSection, "basic", translate("Running Status"))
 e.anonymous = true
 o = e:option(DummyValue, "timewol_status", translate("当前状态"))
 o.template = "timewol/timewol"
